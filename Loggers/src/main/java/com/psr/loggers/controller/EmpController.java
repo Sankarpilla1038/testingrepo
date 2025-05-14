@@ -27,6 +27,14 @@ public class EmpController {
 	@Autowired
 	private EmpService empService;
 	
+	
+	@GetMapping("/gettingTestEmp")
+	public ResponseEntity<Employee> adddEmp(){
+		return new ResponseEntity<Employee>(new Employee(),HttpStatus.OK);
+	}
+	
+	
+	
 	@PostMapping("/")
 	public ResponseEntity<?> createEmp(@RequestBody Employee emp){
 		
