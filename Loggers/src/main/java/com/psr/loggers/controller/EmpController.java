@@ -29,9 +29,15 @@ public class EmpController {
 	
 	
 	@GetMapping("/gettingTestEmp")
+	public ResponseEntity<Employee> adddEmpppp(){
+		return new ResponseEntity<Employee>(new Employee(),HttpStatus.OK);
+	}
+	
+	@GetMapping("/gettingTestEmpSankar")
 	public ResponseEntity<Employee> adddEmp(){
 		return new ResponseEntity<Employee>(new Employee(),HttpStatus.OK);
 	}
+	
 	
 	
 	
