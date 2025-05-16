@@ -19,6 +19,13 @@ public class EmpService {
 		return empRepo.save(emp);
 	}
 	
+
+	public Employee saveShankar(Employee emp) {
+		
+		return empRepo.save(emp);
+	}
+	
+	
    public Employee getEmployee(int id) {
 		
 		return empRepo.findById(id).get();

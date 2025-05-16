@@ -33,6 +33,13 @@ public class EmpController {
 		return new ResponseEntity<Employee>(new Employee(),HttpStatus.OK);
 	}
 	
+
+	@GetMapping("/shankarapi")
+	public ResponseEntity<Employee> createdByShanker(){
+		return new ResponseEntity<Employee>(new Employee(),HttpStatus.OK);
+	}
+	
+	
 	@GetMapping("/gettingTestEmpSankar")
 	public ResponseEntity<Employee> adddEmp(){
 		return new ResponseEntity<Employee>(new Employee(),HttpStatus.OK);
@@ -54,6 +61,15 @@ public class EmpController {
 		return new ResponseEntity<Employee>(empService.getEmployee(id),HttpStatus.OK);
 	}
 
+	//few details
+		@GetMapping("/few/{id}")
+		public Object[] createGigttesting(@PathVariable("id") Integer id){
+			
+			System.out.println("anr doing"+id);
+			return empService.getEmployeeFewDetails(id);
+		}
+	
+	
 	@GetMapping("/")
 	public ResponseEntity<List<Employee>> getAllEmployee(){
 		
